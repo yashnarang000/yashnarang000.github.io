@@ -1,0 +1,78 @@
+<!-- 
+    Copyright © 2024 The Hinode Team / Mark Dumay. All rights reserved.
+    Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
+    Visit gethinode.com/license for more details.
+-->
+
+{{ $error := false }}
+
+<!-- Validate arguments -->
+{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "scripts" "args" . "group" "partial") }}
+    {{- errorf "partial [footer/scripts.html] - Invalid arguments" -}}
+    {{ $error = true }}
+{{ end }}
+
+<!-- Initialize arguments -->
+{{- $absoluteURL := site.Params.main.canonifyAssetsURLs | default false -}}
+{{- $filename := .filename | default "js/main.bundle.js" -}}
+{{- $match := .match | default "{js/*.js,js/vendor/**.js}" -}}
+{{- $page := .page -}}
+{{- $header := .header -}}
+{{- $core := .core | default false -}}
+{{- $skipTemplate := .skipTemplate | default false -}}
+{{- $localize := .localize | default false }}
+
+{{- $state := .state | default "async" -}}
+{{- if or $header (eq $state "immediate") }}{{ $state = "" }}{{ end -}}
+
+{{ $config := $page.Scratch.Get "modules" }}
+{{ if not $config }}
+    {{ errorf "partial [footer/scripts.html] - Cannot initialize module configuration" }}
+{{ end }}
+
+{{- $modules := "" -}}
+{{ if $core }}
+    {{- $modules = $config.core -}}
+    {{- if reflect.IsSlice $config.localize -}}
+        {{- range $index, $mod := $modules -}}            
+            {{- if in $config.localize $mod}}
+                {{- $localize = true -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{ if $localize }}
+    {{ $filename = path.Join (path.Dir $filename) (printf "%s.%s%s" (path.BaseName $filename) $page.Language.Lang (path.Ext $filename)) }}
+{{ end }}
+
+<!-- Main code -->
+
+{{- $bundle := partial "utilities/bundle" (dict
+    "match" $match
+    "filename" $filename
+    "modules" $modules
+    "basepath" "js/modules"
+    "all" true
+    "debugging" site.Params.debugging.showJS
+) -}}
+{{- $js := $bundle -}}
+{{- if not $skipTemplate -}}
+    {{- $js = $bundle | resources.ExecuteAsTemplate $filename $page -}}
+{{- end -}}
+
+{{- if and (not hugo.IsServer) $header -}}
+    {{- $pc := site.Config.Privacy.GoogleAnalytics -}}
+    {{- if and (not $pc.Disable) (hasPrefix site.Config.Services.GoogleAnalytics.ID "G-") }}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Config.Services.GoogleAnalytics.ID }}"></script>
+    {{- end }}
+{{- end -}}
+
+{{- if gt (len $js.Content) 0 -}}
+    {{- if not hugo.IsProduction -}}
+        <script src="{{ if $absoluteURL }}{{ $js.Permalink }}{{ else }}{{ $js.RelPermalink }}{{ end }}"{{ with $state }} {{ . | safeHTMLAttr }}{{ end }}></script>
+    {{ else -}}
+        {{ $js = $js | minify | fingerprint -}}
+        <script src="{{ if $absoluteURL }}{{ $js.Permalink }}{{ else }}{{ $js.RelPermalink }}{{ end }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"{{ with $state}} {{ . | safeHTMLAttr }}{{ end }}></script>
+    {{ end -}}
+{{ end -}}

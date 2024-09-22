@@ -1,0 +1,55 @@
+<!-- 
+    Copyright © 2024 The Hinode Team / Mark Dumay. All rights reserved.
+    Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
+    Visit gethinode.com/license for more details.
+-->
+
+{{ $error := false }}
+
+<!-- Validate arguments -->
+{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "table" "args" .Params) }}
+    {{ errorf "Invalid arguments: %s" .Position -}}
+    {{ $error = true }}
+{{ end }}
+
+<!-- Initialize arguments -->
+{{ $breakpoint := "" }}
+{{ $class := "" }}
+{{ $sortable := false }}
+{{ $paging := false }}
+{{ $searchable := false }}
+
+{{- if .IsNamedParams -}}
+    {{ $breakpoint = .Get "breakpoint" }}
+    {{ $class = .Get "class" | default "" }}
+    {{ with (.Get "sortable")}} {{ $sortable = partial "utilities/CastBool.html" . }}{{ end }}
+    {{ with (.Get "paging")}} {{ $paging = partial "utilities/CastBool.html" . }}{{ end }}
+    {{ with (.Get "searchable")}} {{ $searchable = partial "utilities/CastBool.html" . }}{{ end }}
+{{ else }}
+    {{ $breakpoint = .Get 0 }}
+{{ end }}
+
+<!-- Main code -->
+ {{ if or $sortable $paging $searchable }}{{ $class = trim (printf "%s data-table" $class) " " }}{{ end }}
+{{- $input := .Inner | .Page.RenderString }}
+{{- $input = replace $input "style=\"text-align:left\"" "class=\"text-start\"" -}}
+{{- $input = replace $input "style=\"text-align:center\"" "class=\"text-center\"" -}}
+{{- $input = replace $input "style=\"text-align:right\"" "class=\"text-end\"" -}}
+
+{{ $attributes := "" }}
+{{ if $sortable }}{{ $attributes = printf "%s data-table-sortable=true" $attributes }}{{ end }}
+{{ if $paging }}{{ $attributes = printf "%s data-table-paging=true" $attributes }}{{ end }}
+{{ if $searchable }}{{ $attributes = printf "%s data-table-searchable=true" $attributes }}{{ end }}
+
+{{- $old := "<table>" -}}
+{{- $new := printf "<table class=\"table %s\" %s>" $class (trim $attributes " ") -}}
+{{ $input := replace $input $old $new -}}
+{{ if not $error }}
+    {{ if eq $breakpoint "none" }}
+        {{ $input | safeHTML }}
+    {{ else }}
+        <div class="table-responsive{{- with $breakpoint }}-{{ . }}{{ end -}}">
+        {{ $input | safeHTML }}
+        </div>
+    {{ end }}
+{{ end }}

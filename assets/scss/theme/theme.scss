@@ -1,0 +1,70 @@
+// Placeholder to quickly add your own styles
+// The file is included last in the build pipeline
+
+.display-4, .fs-5.text-muted, .nav-item, .text-body-secondary.text-uppercase, .py-3.text-body-secondary.hstack.gap-1, .d-flex.justify-content-start {
+    font-family: 'Lora';
+}
+
+.card-title.fs-lg-4.fs-6.fw-bold, .card-text.card-body-link, .col-12.col-md-8.p-0, .search-input.form-control.is-search {
+    font-family: 'Junge';
+}
+
+.lead.mb-5.mt-3 {
+    font-family: 'Lora';
+}
+
+// .display-4 {
+//     font-size: 41px;
+// }
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 45px;
+    }
+}
+
+.col.col-12.col-md-4.order-1.order-md-0.my-md-auto {
+    width: 750px;
+}
+
+#title-container {
+    position: relative;
+    height: 80px; /* Adjust based on your design */
+}
+@media (max-width: 768px) {
+    #title-container {
+        position: relative;
+        height: 165px; /* Adjust based on your design */
+    }
+}
+
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-break {
+        display: block;
+    }
+}
+
+.flicker-title {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%; /* Ensure titles take full width */
+}
+
+.flicker-title.active {
+    opacity: 1;
+}
+
+.custom-offset {
+    height: 4.5rem; /* Adjust height as needed */
+    display: block; /* Ensure it is displayed */
+}
+
+.custom-offset-more {
+    height: 6rem;
+    display: block;
+}

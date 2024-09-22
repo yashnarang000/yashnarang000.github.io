@@ -1,12 +1,27 @@
 [[main]]
-  name = "Home"
-  pageRef = "/"
+  name = "Blog"
+  pageRef = "/blog/"
   weight = 10
 
 [[main]]
-  name = "Tags"
-  pageRef = "/tags"
+  name = "Projects"
+  pageRef = "/projects/"
   weight = 20
+
+[[main]]
+  name = "Tags"
+  pageRef = "/tags/"
+  weight = 25
+
+[[main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 30
+
+[[main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 40
 
 [[social]]
   name = "LinkedIn"
@@ -28,8 +43,8 @@
 
 # toml-docs-start sample-navigation
 [[sample]]
-  name = "Blog"
-  pageRef = "/blog/"
+  name = "Posts"
+  pageRef = "/posts/"
   weight = 10
 
 [[sample]]

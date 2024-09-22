@@ -1,18 +1,19 @@
 [main]
     separator = "-"
-    description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
+    description = "This blog documents every major problem Yash solves."
     enableDarkMode = true
     modes = ["light", "dark"]
     canonifyAssetsURLs = false
-    endorse = true
+    endorse = false
     footerBelowFold = false
     loading = "lazy"
     breakpoint = "md"
     [main.externalLinks]
-        cue = false
-        tab = false
+        cue = true
+        tab = true
     [main.build]
         transpiler = "libsass"
+
 
 [debugging]
     showJS = false
@@ -25,23 +26,25 @@
     checkVersion = false
 
 [home]
-    # sections = ["posts"]
-    fullCover = false
-    centerHeadline = false
+    # sections = ["posts", "projects"]
+    fullCover = true
+    centerHeadline = true
     style = ""
 
 [navigation]
     anchor = true
-    logo = "/img/logo_icon.svg"
+    logo = "/img/Yash.png"
+    logoWidth = 250
     color = "body"
     fixed = true
-    offset = "5.5rem"
+    offset = "0rem"
+    overlay = true
     search = true
-    searchModal = false
-    breadcrumb = true
+    searchModal = true
+    breadcrumb = false
     toc = true
     sidebar = true
-    size = "md"
+    size = "sm"
 
 [messages]
     placement = "bottom-right"
@@ -99,15 +102,29 @@
 #         style = "border-0 card-zoom"
 #         homepage = 3
 #         separator = true
+
+[sections]
+    [sections.blog]
+        title = "Blog"
+        layout = "card"
+        reverse = true
+        nested = true
+        sort = "date"
+        separator = true
+    [sections.projects]
+        title = "Projects"
+        nested = false
+        layout = "list"
+
 # toml-docs-end sections
 
 [favicon]
-    logo = "img/favicon.png"
+    logo = "img/favicon/YN2.png"
     sizes = [16, 32, 48]
 
 [style]
-    primary = "#d43900"
-    secondary = "#6c757d"
+    primary = "#025db8"
+    secondary = "#72acfc"
     success = "#198754"
     info = "#0dcaf0"
     warning = "#ffc107"
@@ -117,33 +134,23 @@
     themeOpacity = "10"
     darkModeShade = "20%"
     darkModeTint = "40%"
-    themeFont = "Inter"
-    # themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" # external path
+    themeFont = "Junge, Lora, Ubuntu"
+    # themeFontPath = "https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" # external path
     themeFontPath = "/fonts" # local path
     fontSizeBase = "1rem"
     purge = false
 
 [schema]
     type = "Organization"
-    name = "Hinode"
+    name = "Yash Narang"
     locale = "en-US"
-    # twitter = "https://twitter.com/gethinode"
-    # linkedIn = ""
-    github = "https://github.com/gethinode/hinode"
     section = "blog"
     [author]
-        name = "Mark Dumay"
-        # twitter = "https://twitter.com/markdumay"
-        linkedin = "https://www.linkedin.com/in/markdumay/"
-        github = "https://github.com/markdumay"
+        name = "Yash Narang"
     [logo]
-        url = "img/logo512x512.png"
-        width = 512
-        height = 512
-    [image]
-        url = "img/logo1280x640.png"
-        width = 1280
-        height = 640
+        url = "/img/Yash.png"
+        width = 250
+        height = 72
 
 [opengraph]
     images = ["logo.png"]

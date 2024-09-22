@@ -1,10 +1,10 @@
-title = "Hinode"
-copyright = "Copyright © 2024 Mark Dumay."
+title = "Yash Narang"
+copyright = "Copyright © 2024 Yash Narang."
 paginate = 9
 enableGitInfo = true
 
 # additional settings
-baseURL = "https://example.com/"
+baseURL = "https://yashnarang000.github.io"
 canonifyURLs = false
 enableEmoji = true
 enableRobotsTXT = true
