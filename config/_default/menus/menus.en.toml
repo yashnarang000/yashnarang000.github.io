@@ -26,19 +26,19 @@
 [[social]]
   name = "LinkedIn"
   pre = "fab linkedin"
-  url = "https://linkedin.com/"
+  url = "https://www.linkedin.com/in/yash-narang-7b5806325/"
   weight = 10
 
 [[social]]
   name = "GitHub"
   pre = "fab fa-github"
-  url = "https://github.com/"
+  url = "https://github.com/yashnarang000"
   weight = 20
 
 [[social]]
-  name = "Medium"
-  pre = "fab medium"
-  url = "https://medium.com/"
+  name = "Instagram"
+  pre = "fab fa-instagram"
+  url = "https://www.instagram.com/yashnarang000/"
   weight = 30
 
 # toml-docs-start sample-navigation
