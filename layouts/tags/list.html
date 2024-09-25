@@ -5,6 +5,7 @@
     {{- $hasSidebar := site.Params.navigation.sidebar | default true -}}
 
     <div class="container-xxl flex-fill p-4 px-xxl-0">
+        <div class="custom-offset bg-{{ . }} bg-opacity-{{ site.Params.style.themeOpacity }}"></div>
         <div class="row row-cols-1 row-cols-{{ $breakpoint.prev }}-{{ if $hasSidebar }}3{{ else }}2{{ end }}">
             {{ if $hasSidebar }}<div class="col col-{{ $breakpoint.current }}-2 d-none d-{{ $breakpoint.current }}-block"></div>{{ end }}
             <div class="col col-{{ $breakpoint.prev }}-12 col-{{ $breakpoint.current }}-8">
