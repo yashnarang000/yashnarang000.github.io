@@ -9,7 +9,7 @@ tags: Arduino Adventures
 # icon: 
 thumbnail: 
     url: /img/arduino_adventures_1.png
-    # author: 
+    author: Yash Narang
     # authorURL: 
     # origin: 
     # originURL: 
