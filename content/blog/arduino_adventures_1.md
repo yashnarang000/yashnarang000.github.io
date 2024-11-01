@@ -22,13 +22,13 @@ First of all, let me summarize the basics to you. There are three major segments
 First of all, you build the circuit, something like this: 
 
 
-{{< image src="/img/arduino_adventures/1.png" >}}
+{{< image src="/img/arduino_adventures/1/1.png" >}}
 
 
 The white thing above is called a Breadboard and this is how the different holes in the breadboard conduct to each other: 
 
 
-{{< image src="/img/arduino_adventures/2.png" >}}
+{{< image src="/img/arduino_adventures/1/2.png" >}}
 
 
 The LED light here is connected to the 12th pin and the push button is connect to the 2nd port (and also the 5V power pin). Both the components are grounded through the breadboard. The resistor that is connected to the LED is 220 Ohms and the one connected to the push button is 10K Ohms.

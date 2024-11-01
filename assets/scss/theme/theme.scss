@@ -68,10 +68,3 @@
     height: 6rem;
     display: block;
 }
-
-.img-fluid.card-img-top.card-img-bg {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* This will crop if necessary */
-    display: block;
-}
