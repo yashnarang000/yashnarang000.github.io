@@ -6,7 +6,8 @@ description: Let me ask you a question. Why do Harry Potter wands sell, even tho
 tags:
   - psychology
   - marketing
-thumbnail: '{"url":"/img/fiction.jpg"}'
+thumbnail: 
+  url: /img/fiction.jpg
 ---
 Let me ask you a question. Why do Harry Potter wands sell, even though they are just some bunch of wooden toys? And why do even adults are a fan of such toys?
 
