@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "fdc1b74e4dfaf609",
+    "type": "split",
+    "children": [
+      {
+        "id": "b188ca9ebdae0a78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "587dcee264ac1e47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/the_harry_potter_wands_effect.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "the_harry_potter_wands_effect"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45aac10aac9555fa",
+    "type": "split",
+    "children": [
+      {
+        "id": "0938bf58b78641aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8c2b9793925d1c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9c526c19a2d28b0f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "394111876bff7a3a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "00384e983ede1bba",
+    "type": "split",
+    "children": [
+      {
+        "id": "78616d1d8e4894ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec0564802ac93cce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/the_harry_potter_wands_effect.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for the_harry_potter_wands_effect"
+            }
+          },
+          {
+            "id": "6bdf36e02a4acd7a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/the_harry_potter_wands_effect.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from the_harry_potter_wands_effect"
+            }
+          },
+          {
+            "id": "452b494835418120",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9bace87c217db9a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/the_harry_potter_wands_effect.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of the_harry_potter_wands_effect"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "587dcee264ac1e47",
+  "lastOpenFiles": [
+    "blog/arduino_adventures_1.md",
+    "blog/the_harry_potter_wands_effect.md",
+    "blog/_index.md",
+    "blog/prose.md",
+    "the_harry_potter_wands_effect.md"
+  ]
+}
