@@ -1,7 +1,7 @@
 ---
 title: Using Fiction As Advertisement
 date: 2024-12-27T16:48:04+05:30
-draft: true
+draft: false
 description: Let me ask you a question. Why do Harry Potter wands sell, even though they are just some bunch of wooden toys? And why do even adults are a fan of such toys?
 tags:
   - psychology
