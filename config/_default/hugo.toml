@@ -1,6 +1,5 @@
 title = "Yash Narang"
 copyright = "Copyright © 2024 Yash Narang."
-paginate = 9
 enableGitInfo = true
 
 # additional settings
@@ -20,6 +19,9 @@ timeout = "180s"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+
+[pagination]
+pagerSize = 9
 
 [outputFormats.REDIR]
 mediaType = "text/netlify"
