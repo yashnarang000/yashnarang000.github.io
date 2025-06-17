@@ -6,10 +6,8 @@
 }
 
 .card-img-wrap {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+    position: relative;
 }
 
 .card-zoom {
@@ -121,11 +119,11 @@ div.card-container-wrapper::after {
 }
 
 .card-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-	gap: 1.5rem;
-    margin-bottom: 2rem;
-	scroll-snap-type: x proximity;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+	gap: 0.5rem;
+    margin-bottom: 1rem;
+	scroll-snap-	type: x proximity;
 }
 
 .card-block-1 {
