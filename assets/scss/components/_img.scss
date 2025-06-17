@@ -1,4 +1,7 @@
 .img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     position: relative;
     aspect-ratio: 16/9;
