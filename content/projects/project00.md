@@ -2,7 +2,7 @@
 title: "Embedded Systems Mini Projects"
 thumbnail:
     url: "/img/embedded-mini.png"
-draft: true
+draft: false
 ---
 
 Mini projects that actually do something—react, respond, and move. No simulations—real circuits, real outcomes. From sensors that sense to motors that move, every project here is a test of control, precision, and stubborn curiosity.
