@@ -1,12 +1,13 @@
 .img-wrap {
     overflow: hidden;
     position: relative;
+    aspect-ratio: 16/9;
 }
 
 .img-wrap img {
-    height: 100%;
+    height: auto;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-img-h100 {
