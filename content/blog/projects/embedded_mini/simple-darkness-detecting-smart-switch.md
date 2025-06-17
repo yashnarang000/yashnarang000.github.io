@@ -3,7 +3,7 @@ title: "Simple Darkness Detector Smart Switch"
 date: 2025-06-17T19:30:00+05:30
 thumbnail:
     url: "/img/ldr-switch.png"
-tags: ["project 00"]
+tags: ["embedded-mini"]
 draft: false
 ---
 
