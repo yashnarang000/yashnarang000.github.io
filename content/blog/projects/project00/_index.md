@@ -1,7 +1,9 @@
 ---
-title: "Project 00: JARVIS"
+title: "Embedded Systems Mini Projects"
 thumbnail:
-    url: "/img/puzzle.jpg"
+    url: "/img/embedded-mini.png"
 ---
 
-This project is one of my first but finest projects. The amount of effort I had put in this was immeasurable. I have improved a lot from this and I still use this program for my regular tasks. It has become a part of me now.
+Mini projects that actually do something—react, respond, and move. No simulations—real circuits, real outcomes. From sensors that sense to motors that move, every project here is a test of control, precision, and stubborn curiosity.
+
+This isn’t lab work. It’s problem-solving in its rawest form—code meeting copper, logic powering action. If it doesn’t work, I fix it. If it does, I push it further.
