@@ -10,3 +10,4 @@ Mini projects that actually do something—react, respond, and move. No simulati
 This isn’t lab work. It’s problem-solving in its rawest form—code meeting copper, logic powering action. If it doesn’t work, I fix it. If it does, I push it further.
 
 {{<button href="/blog/projects/embedded_mini" color="success">}}Blog{{</button>}}
+{{<button href="https://github.com/yashnarang000/ldr-servo-switch" color="danger">}}Code{{</button>}}
