@@ -5,7 +5,7 @@ tags: ["embedded-mini"]
 draft: false
 ---
 
-![Thumbnail](/img/tv-fan.png)
+{{< image src="/img/tv-fan.png" >}}
 
 # Introduction
 
@@ -38,15 +38,15 @@ The plan was simple:
 **Setup:**
 - LDR positioned next to TV's indicator LED with tape
 
-![LDR Sensor](/img/em_ldr_setup.jpg)
+{{< image src="/img/em_ldr_setup.jpg" >}}
 
 - Servo mounted to fan switch (more tape)
 
-![Servo Motor](/img/em_servo_setup.jpg)
+{{< image src="/img/em_servo_setup.jpg" >}}
 
 - Wired everything together without Googling "Arduino servo wiring" too many times
 
-![Arduino](/img/em_arduino_setup.jpg)
+{{< image src="/img/em_arduino_setup.jpg" >}}
 
 # The Code
 
@@ -123,7 +123,7 @@ void loop() {
 
 **Result:** It actually works!
 
-![Overall Setup](/img/em_overall_setup.jpg)
+{{< image src="/img/em_overall_setup.jpg" >}}
 
 ## Performance
 
