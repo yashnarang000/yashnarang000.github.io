@@ -137,10 +137,7 @@ The system works about 90% of the time. When I turn on my TV, the Arduino detect
 
 ## Demonstration
 
-{{< video
-  src="/img/em_tvfan_demo.mp4"
-  width="600"
->}}
+{{< video src="/img/em_tvfan_demo.mp4" >}}
 
 ## Lessons Learned
 
