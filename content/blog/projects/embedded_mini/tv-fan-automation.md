@@ -1,8 +1,6 @@
 ---
 title: "How I Automated My Fan With My TV Using Arduino Uno"
 date: 2025-06-21T09:30:00+05:30
-thumbnail:
-    url: "/img/tv-fan.png"
 tags: ["embedded-mini"]
 draft: false
 ---

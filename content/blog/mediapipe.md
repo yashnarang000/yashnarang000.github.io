@@ -7,12 +7,6 @@ draft: false
 description: Understanding hand tracking basics for building programs like Finger Counter, Gesture Control, Hand Painter, and even a 3D Tennis game controlled with your hands.
 tags: Computer Vision
 # icon: 
-thumbnail: 
-    url: /img/hand_tracking_lm.png
-    # author: 
-    # authorURL: 
-    # origin: 
-    # originURL: 
 ---
 While Mediapipe is an amazing tool for using premade AIML and Computer Vision tools in our own projects, many beginners spank their heads on their keyboard in frustration because they wouldn't sufficiently 'understand' it to apply it. We often get confused if we need to by heart every step or understand the logic behind why every line of code works. 
 
