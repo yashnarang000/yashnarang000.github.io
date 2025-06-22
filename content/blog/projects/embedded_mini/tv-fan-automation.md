@@ -135,10 +135,6 @@ The system works about 90% of the time. When I turn on my TV, the Arduino detect
 - Decent conversation starter
 - Peak budget engineering flex
 
-## Demonstration
-
-{{< video src="/videos/em_tvfan_demo.mp4" >}}
-
 ## Lessons Learned
 
 1. Servo calibration is mostly trial and error
