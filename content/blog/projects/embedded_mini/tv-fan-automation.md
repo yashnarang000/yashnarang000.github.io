@@ -5,6 +5,8 @@ tags: ["embedded-mini"]
 draft: false
 ---
 
+![Thumbnail](/img/tv-fan.png)
+
 # Introduction
 
 Hi, I'm Yash Narang, and this is how I spent 8 hours making my TV automatically turn on my wall fan. Because apparently, reaching 3 feet for a switch was too much effort.
