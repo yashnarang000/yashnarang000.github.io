@@ -5,6 +5,8 @@ tags: ["embedded-mini"]
 draft: false
 ---
 
+# Introduction
+
 Hi, I'm Yash Narang, and this is how I spent 8 hours making my TV automatically turn on my wall fan. Because apparently, reaching 3 feet for a switch was too much effort.
 
 **Want to build this yourself?** Skip to the "DIY Guide" section for the technical details.
@@ -23,7 +25,7 @@ The plan was simple:
 3. Servo motor clicks my fan switch
 4. Peak unnecessary automation achieved
 
-## Hardware Setup
+# Hardware Setup
 
 **Components:**
 - Clone Arduino Uno (works 90% as well for 30% of the price)
@@ -33,10 +35,18 @@ The plan was simple:
 
 **Setup:**
 - LDR positioned next to TV's indicator LED with tape
+
+![LDR Sensor](/img/em_ldr_setup.jpg)
+
 - Servo mounted to fan switch (more tape)
+
+![Servo Motor](/img/em_servo_setup.jpg)
+
 - Wired everything together without Googling "Arduino servo wiring" too many times
 
-## The Code
+![Arduino](/img/em_arduino_setup.jpg)
+
+# The Code
 
 ```arduino
 #define ldrpin A0
@@ -99,7 +109,7 @@ void loop() {
 - Reading confirmed > 720
 - Servo rotates to 110°, clicks switch, returns to 0°
 
-## The 8-Hour Build
+# The 8-Hour Build
 
 **Hours 1-2:** "This will be easy!" (It wasn't)
 
@@ -111,6 +121,8 @@ void loop() {
 
 **Result:** It actually works!
 
+![Overall Setup](/img/em_overall_setup.jpg)
+
 ## Performance
 
 The system works about 90% of the time. When I turn on my TV, the Arduino detects the change and clicks the fan switch automatically.
@@ -121,6 +133,13 @@ The system works about 90% of the time. When I turn on my TV, the Arduino detect
 - Decent conversation starter
 - Peak budget engineering flex
 
+## Demonstration
+
+{{< video
+  src="/img/em_tvfan_demo.mp4"
+  width="600"
+>}}
+
 ## Lessons Learned
 
 1. Servo calibration is mostly trial and error
@@ -128,21 +147,21 @@ The system works about 90% of the time. When I turn on my TV, the Arduino detect
 3. Clone components work fine for budget builds
 4. Double-sided tape is legitimate engineering material
 
-## DIY Guide: Build Your Own
+# DIY Guide: Build Your Own
 
-### Shopping List (₹300-1000 total)
+## Shopping List (₹300-1000 total)
 - Arduino Uno (clone works) - ₹200-800
 - LDR + 10kΩ resistor - ₹15
 - SG90 Servo Motor - ₹150
 - Jumper wires + tape - ₹80
 
-### Circuit Connections
+## Circuit Connections
 ```
 LDR: One leg → 5V, Other leg → A0 + 10kΩ resistor → GND
 Servo: Red → 5V, Black → GND, Signal → Pin 9
 ```
 
-### Calibration Steps
+## Calibration Steps
 
 **Step 1:** Upload this code to find your TV's readings:
 ```arduino
@@ -162,18 +181,18 @@ void loop() {
 
 **Step 3:** Update main code with your threshold values
 
-### Mounting
+## Mounting
 - Position LDR next to TV LED (tape works)
 - Mount servo to click fan switch
 - Test servo angle (try 90°, 110°, 130°)
 - Shield LDR from room lighting
 
-### Troubleshooting
+## Troubleshooting
 - **Servo misses switch:** Adjust angle/position
 - **False triggers:** Better LDR shielding
 - **No response:** Check connections via Serial Monitor
 
-## Conclusion
+# Conclusion
 
 Did I need this? No. Am I proud of it? Absolutely.
 
