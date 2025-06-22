@@ -38,7 +38,7 @@ The plan was simple:
 **Setup:**
 - LDR positioned next to TV's indicator LED with tape
 
-{{< image src="/img/em_ldr_setup.jpg" >}}
+{{< image src="/img/em_ldr-setup.jpg" >}}
 
 - Servo mounted to fan switch (more tape)
 
@@ -46,7 +46,7 @@ The plan was simple:
 
 - Wired everything together without Googling "Arduino servo wiring" too many times
 
-{{< image src="/img/em_arduino_setup.jpg" >}}
+{{< image src="/img/em_arduino-setup.jpg" >}}
 
 # The Code
 
