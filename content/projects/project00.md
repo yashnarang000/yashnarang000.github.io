@@ -11,4 +11,4 @@ This isn’t lab work. It’s problem-solving in its rawest form—code meeting 
 
 {{<button href="/blog/projects/embedded_mini" color="success">}}Blog{{</button>}}
 
-{{<button href="https://github.com/yashnarang000/ldr-servo-switch" color="danger">}}Code{{</button>}}
+{{<button href="https://github.com/yashnarang000/embedded-mini-projects/" color="danger">}}Code{{</button>}}
