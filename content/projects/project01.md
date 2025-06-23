@@ -1,6 +1,6 @@
 ---
 title: "NCryptor"
-date: 1969-01-01T00:00:00+05:30
+date: 1969-01-02T00:00:00+05:30
 thumbnail:
     url: "/img/nc.png"
 draft: false
