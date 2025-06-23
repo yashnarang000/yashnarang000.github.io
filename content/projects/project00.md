@@ -1,5 +1,6 @@
 ---
-title: "Project 01: Embedded Systems Mini Projects"
+title: "Embedded Systems Mini Projects"
+date: 1969-1-1T00:00
 thumbnail:
     url: "/img/embedded-mini.png"
 draft: false
