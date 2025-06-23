@@ -2,8 +2,8 @@
 title: "NCryptor"
 date: 1969-1-2T00:00
 thumbnail:
-    url: "/img/tear-light.jpg"
-draft: true
+    url: "/img/nc.png"
+draft: false
 
 ---
 
