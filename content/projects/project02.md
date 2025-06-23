@@ -2,7 +2,7 @@
 title: "Talking Diary"
 date: 1969-01-01T00:00:00+05:30
 thumbnail:
-    url: "/img/talkingdiary.png"
+    url: "/img/unnamed.gif"
 draft: false
 ---
 
