@@ -1,5 +1,5 @@
 ---
-title: "Embedded Systems Mini Projects"
+title: "Project 01: Embedded Systems Mini Projects"
 thumbnail:
     url: "/img/embedded-mini.png"
 draft: false
