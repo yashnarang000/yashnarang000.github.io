@@ -1,5 +1,6 @@
 ---
 title: "Project 01: Website"
+date: 1969-01-01T00:00:00+05:30
 thumbnail:
     url: "/img/tear-light.jpg"
 draft: true
