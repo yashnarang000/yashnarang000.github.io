@@ -6,7 +6,7 @@
     canonifyAssetsURLs = false
     endorse = false
     footerBelowFold = false
-    loading = "lazy"
+    loading = "eager"
     breakpoint = "md"
     [main.externalLinks]
         cue = true
@@ -27,6 +27,7 @@
 
 [home]
     # sections = ["posts", "projects"]
+    sections = ["projects", "blog"]
     fullCover = true
     centerHeadline = true
     style = ""
@@ -114,6 +115,7 @@
     [sections.projects]
         title = "Projects"
         nested = false
+        reverse = true
         layout = "list"
 
 # toml-docs-end sections

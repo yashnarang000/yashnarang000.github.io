@@ -4,11 +4,10 @@ title: Arduino Adventures Episode 1 — Deboucing The Bouncing Button (Controlli
 date: 2024-10-31T22:35:12+05:30
 draft: false
 # layout: 
-description: In the first episode of Arduino Adventures, I program a push button to light up an LED. Sounds like an easy challenge, right? Well, not quite! Because of the bouncing effect of the button, the LED started giving abnormal results. Join me in this journey of debugging and the introduction of debouncing logic, which led to a more reliable outcome.
-tags: Arduino Adventures
+description: " "
 # icon: 
 thumbnail: 
-    url: /img/arduino_adventures_1.png
+    # url: /img/arduino_adventures_1.png
     # author: 
     # authorURL: 
     # origin: 
