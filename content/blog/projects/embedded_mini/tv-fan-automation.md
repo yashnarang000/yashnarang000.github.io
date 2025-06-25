@@ -2,6 +2,7 @@
 title: "How I Automated Wall Fan With My TV Using Arduino Uno"
 date: 2025-06-21T09:30:00+05:30
 tags: ["embedded-mini"]
+description: TV On = Fan On. How? Click here to know.
 draft: false
 ---
 

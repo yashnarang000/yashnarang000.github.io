@@ -1,0 +1,36 @@
+{{ $error := false }}
+
+{{/* Validate arguments */}}
+{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "minimaltwo" "args" . "group" "partial") }}
+  {{- errorf "partial [assets/minimaltwo.html] - Invalid arguments" -}}
+  {{ $error = true }}
+{{ end }}
+
+{{ $list := .list }}
+{{ $class := .class }}
+
+{{ if not $error }}
+  {{ range $index, $item := $list }}
+    <div class="container-fluid p-0 pb-3">
+      <div class="row">
+        <div class="col-3 col-md-2">
+          {{ partial "utilities/date.html" (dict "date" $item.Date "format" "short") }}
+        </div>
+        <div class="col-9 col-md-10">
+          <a href="{{ $item.RelPermalink }}"><strong>{{ $item.Title }}</strong></a>
+        <div class="text-muted small mt-1">
+          {{ with $item.Params.description }}
+            {{ . }}
+          {{ else }}
+            {{ $item.Summary }}
+          {{ end }}
+        </div>
+        </div>
+      </div>
+      {{ if lt (add $index 1) (len $list) }}
+        <hr class="my-3">
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+

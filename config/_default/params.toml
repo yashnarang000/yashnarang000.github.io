@@ -107,7 +107,7 @@
 [sections]
     [sections.blog]
         title = "Blog"
-        layout = "card"
+        layout = "minimaltwo"
         reverse = true
         nested = true
         sort = "date"

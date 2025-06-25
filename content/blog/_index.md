@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-layout: "nav"
+layout: "minimal"
 ---
