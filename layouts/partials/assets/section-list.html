@@ -127,6 +127,8 @@
         {{- $paginate = false -}}
         {{- $max = int (math.Min $homepage $max) -}}
     {{ end -}}
+    
+    {{- $list = first $max $list -}}
 
     {{ if $simple }}
         {{ $title = "" }}
@@ -191,6 +193,14 @@
                 -}}
             {{- end -}}
             {{- partial $partial $params -}}
+{{ if $home }}
+  <div class="text-center mt-4">
+    <a href="{{ $sectionURL | default (printf "/%s/" $section) }}" class="btn btn-outline-primary">
+      Read More →
+    </a>
+  </div>
+{{ end }}
+
         </div>
     </div>
 {{- end -}}

@@ -108,6 +108,7 @@
     [sections.blog]
         title = "Blog"
         layout = "minimaltwo"
+        homepage = 3 # how many blog posts are to be seen on the homepage
         reverse = true
         nested = true
         sort = "date"
