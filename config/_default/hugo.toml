@@ -21,7 +21,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [pagination]
-pagerSize = 9
+pagerSize = 4
 
 [outputFormats.REDIR]
 mediaType = "text/netlify"

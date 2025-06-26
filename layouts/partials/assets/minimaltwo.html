@@ -1,36 +1,55 @@
 {{ $error := false }}
 
-{{/* Validate arguments */}}
 {{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "minimaltwo" "args" . "group" "partial") }}
-  {{- errorf "partial [assets/minimaltwo.html] - Invalid arguments" -}}
+  {{ errorf "partial [assets/minimaltwo.html] - Invalid arguments" }}
   {{ $error = true }}
 {{ end }}
 
-{{ $list := .list }}
-{{ $class := .class }}
-
 {{ if not $error }}
-  {{ range $index, $item := $list }}
-    <div class="container-fluid p-0 pb-3">
+  {{ $page := .page }}
+  {{ $list := .list }}
+  {{ $paginate := .paginate | default false }}
+  {{ $paginator := false }}
+  {{ $class := .class | default "" }}
+  {{ $items := $list }}
+
+  {{ $isPages := in (slice "page.Pages" "resource.Resources") (printf "%T" $list) }}
+
+  {{ if and $isPages $paginate }}
+    {{ $paginator = $page.Paginate $list }}
+    {{ $items = first $paginator.PagerSize (after (mul (sub $paginator.PageNumber 1) $paginator.PagerSize) $list) }}
+  {{ end }}
+
+  {{ range $index, $item := $items }}
+    <div class="container-fluid p-0 pb-3 {{ $class }}">
       <div class="row">
         <div class="col-3 col-md-2">
           {{ partial "utilities/date.html" (dict "date" $item.Date "format" "short") }}
         </div>
         <div class="col-9 col-md-10">
           <a href="{{ $item.RelPermalink }}"><strong>{{ $item.Title }}</strong></a>
-        <div class="text-muted small mt-1">
-          {{ with $item.Params.description }}
-            {{ . }}
-          {{ else }}
-            {{ $item.Summary }}
-          {{ end }}
-        </div>
+
+          <div class="text-muted small mt-1">
+            {{ with $item.Params.description }}
+              {{ . }}
+            {{ else }}
+              {{ $item.Summary }}
+            {{ end }}
+          </div>
         </div>
       </div>
-      {{ if lt (add $index 1) (len $list) }}
+      {{ if lt (add $index 1) (len $items) }}
         <hr class="my-3">
       {{ end }}
     </div>
+  {{ end }}
+
+  {{ if $paginator }}
+    {{ if gt $paginator.TotalPages 1 }}
+      <div class="pt-3">
+        {{ partial "assets/pagination.html" (dict "page" $page "format" "terse") }}
+      </div>
+    {{ end }}
   {{ end }}
 {{ end }}
 

@@ -179,7 +179,7 @@
   
             {{- else if eq $layout "minimaltwo" -}}
   {{- $partial = "assets/minimaltwo.html" -}}
-
+  {{- $params = merge $params (dict "paginate" true) -}}
 
             {{- else -}}
                 {{- $partial = "assets/list.html" -}}
