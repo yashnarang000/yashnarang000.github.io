@@ -60,6 +60,7 @@
     {{- with index . "footer" }}{{ $footer = . }}{{ end -}}
     {{- with index . "style" }}{{ $style = . }}{{ end -}}
     {{- with index . "homepage" }}{{ $homepage = . }}{{ end -}}
+    {{- with index . "moreTitle" }}{{ $moreTitle = . }}{{ end -}}
     {{- with index . "background" }}{{ $background = . }}{{ end -}}
     {{- with index . "layout" }}{{ $layout = . }}{{ end -}}
     {{- with index . "pane" }}{{ $pane = . }}{{ end -}}
@@ -196,8 +197,9 @@
 {{ if $home }}
   <div class="text-center mt-4">
     <a href="{{ $sectionURL | default (printf "/%s/" $section) }}" class="btn btn-outline-primary">
-      Read More →
+      {{ $moreTitle | default "Read More" }} →
     </a>
+
   </div>
 {{ end }}
 

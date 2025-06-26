@@ -109,12 +109,15 @@
         title = "Blog"
         layout = "minimaltwo"
         homepage = 3 # how many blog posts are to be seen on the homepage
+        moreTitle = "Read More"
         reverse = true
         nested = true
         sort = "date"
         separator = true
     [sections.projects]
         title = "Projects"
+        homepage = 5
+        moreTitle = "Explore"
         nested = false
         reverse = true
         layout = "list"
